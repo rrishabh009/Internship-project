@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ring: 2px solid theme('colors.primary.500'); }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+:focus-visible { outline: var(--ring); outline-offset: 2px; }
+
+/* Utilities */
+@layer utilities {
+  .thin-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+  .thin-scrollbar::-webkit-scrollbar-thumb { background: theme('colors.neutral.300'); border-radius: 9999px; }
+  .thin-scrollbar:hover::-webkit-scrollbar-thumb { background: theme('colors.neutral.400'); }
+}
